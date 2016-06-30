@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='main.css'></script>
+    <title>New Pantry Design</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class='light-blue accent-2'>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">MyPantry</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">My Pantry</a></li>
+            <li><a href="#">Search Recipes</a></li>
+            <li><a href="#">My Grocery List</a></li>
+            <li><a href="#">My Cookbook</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="parallax-container">
+        <div class="parallax"><img src="images/top-pic.jpeg"></div>
+      </div>
+      <div class="section white">
+        <div class="row container">
+          <h2 class="header">Log In To Your Online Pantry!</h2>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="username" type="text" class="validate">
+                  <label for="username">Username</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="password" type="text" class="validate">
+                  <label for="password">Password</label>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light light-blue accent-2" type="submit" name="action">Submit
+                  <i class="material-icons right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="parallax-container">
+        <div class="parallax"><img src="images/bottom-pic.jpg"></div>
+      </div>
+    </main>
+    <footer>
+      <footer class="light-blue accent-2">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Logo?</h5>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Site Map</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Terms & Agreements</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Brian Dumoulin
+            </div>
+          </div>
+        </footer>
+    </footer>
+  </body>
+</html>
