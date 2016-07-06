@@ -1,0 +1,39 @@
+{
+  "name": "mypantry",
+  "version": "2.0.0",
+  "description": "unique recipe site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmdumoulin10/new-final-design.git"
+  },
+  "keywords": [
+    "recipe",
+    "recipes",
+    "cookbook",
+    "food",
+    "cooking",
+    "cook",
+    "pantry",
+    "cupboard",
+    "fridge",
+    "groceries",
+    "search"
+  ],
+  "author": "brian dumoulin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmdumoulin10/new-final-design/issues"
+  },
+  "homepage": "https://github.com/bmdumoulin10/new-final-design#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "request": "^2.72.0"
+  }
+}

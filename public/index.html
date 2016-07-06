@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="myPantryApp">
+  <head>
+    <meta charset="utf-8">
+    <title>New Pantry Design</title>
+    <link rel="stylesheet" href="main.css">
+    <title>New Pantry Design</title>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="light-blue accent-2">
+        <div class="nav-wrapper">
+<!-- normal navbar at the top only for larger than medium sized screens -->
+          <a ui-sref="home" class="mypantry brand-logo ">MyPantry</a>
+          <a href="#" data-activates="side-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a ui-sref="myPantry">My Pantry</a></li>
+            <li><a ui-sref="searchRecipes">Search Recipes</a></li>
+            <li><a ui-sref="myGroceryList">My Grocery List</a></li>
+            <li><a ui-sref="myCookBook">My Cookbook</a></li>
+          </ul>
+<!-- hamburger menu for med sized screens or smaller -->
+          <ul class="side-nav" id="side-menu">
+            <li><a ui-sref="myPantry">My Pantry</a></li>
+            <li><a ui-sref="searchRecipes">Search Recipes</a></li>
+            <li><a ui-sref="myGroceryList">My Grocery List</a></li>
+            <li><a ui-sref="myCookBook">My Cookbook</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+      <ui-view>
+        <!--This area is replaced with each partial page!!  -->
+      </ui-view>
+
+    </main>
+
+    <footer class="light-blue accent-2">
+        <div class="footer-copyright">
+          <div class="container">
+            <ul>
+              <li class='bottom-links'><a class="grey-text text-lighten-3" ui-sref="about">About Us</a></li>
+              <li class='bottom-links'><a class="grey-text text-lighten-3" ui-sref="contact">Contact Us</a></li>
+              <li class='bottom-links'><a class="grey-text text-lighten-3" ui-sref="faqs">FAQs</a></li>
+              <li class='bottom-links'><a class="grey-text text-lighten-3" ui-sref="terms">Terms</a></li>
+              <li class="bottom-links right"> © 2016 Copyright Brian Dumoulin</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    <!--Bower Components for UI Router-->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!--UI Router & All Controllers-->
+    <script rel='javascript' src='app.js'></script>
+    <script rel='javascript' src='recipeFactory.js'></script>
+    <script rel='javascript' src='homeController.js'></script>
+    <script rel='javascript' src='mainController.js'></script>
+    <script rel='javascript' src='myCookBookController.js'></script>
+    <script rel='javascript' src='myGroceryListController.js'></script>
+    <script rel='javascript' src='myPantryController.js'></script>
+    <script rel='javascript' src='searchRecipesController.js'></script>
+
+
+  </body>
+</html>

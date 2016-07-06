@@ -1,3 +1,5 @@
+/*home page styles*/
+
 body {
     display: flex;
     min-height: 100vh;
@@ -19,4 +21,11 @@ main {
 .bottom-links{
   display: inline-block;
   padding: 15px;
+}
+
+/*my pantry styles*/
+
+.pantry-background{
+  background-image: url("./images/pantry-pic.jpg");
+  background-color: black;
 }
