@@ -23,9 +23,17 @@ main {
   padding: 15px;
 }
 
-/*my pantry styles*/
+.headings{
+  color: #40c4ff;
+  font-family: cursive;
+}
 
-.pantry-background{
-  background-image: url("./images/pantry-pic.jpg");
-  background-color: black;
+.list{
+  font-size: 30px;
+  font-family: Optima, Monotype;
+}
+
+.seperator{
+    border-bottom: 1px solid #2a4c59;
+    padding-bottom: 10px;
 }

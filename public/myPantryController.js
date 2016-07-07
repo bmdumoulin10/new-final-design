@@ -6,33 +6,32 @@
 
   function myPantryController($state,$window){
     var pCtrl = this
-    pCtrl.title = "My Pantry Controller"
+    pCtrl.title = "My Pantry"
     pCtrl.userIngredients = []
   // adding and removing proteins
 
-    var saveProtein = $window.localStorage.getItem('pantryProteins')
+    var saveIngredient = $window.localStorage.getItem('pantryIngredients')
 
-    pCtrl.enterProtein = saveProtein === null? []: saveProtein.split(',')
+    pCtrl.enterIngredient = saveIngredient === null? []: saveIngredient.split(',')
 
-    pCtrl.newProtein = ''
+    pCtrl.newIngredient = ''
+    pCtrl.addIngredient = function(){
+      pCtrl.enterIngredient.push(pCtrl.newIngredient)
+      pCtrl.userIngredients.push(pCtrl.newIngredient)
 
-    pCtrl.addProtein = function(){
-      pCtrl.enterProtein.push(pCtrl.newProtein)
-      pCtrl.userIngredients.push(pCtrl.newProtein)
-
-      pCtrl.newProtein = ''
-      $window.localStorage.setItem('pantryProteins', pCtrl.enterProtein)
-      $window.localStorage.setItem('pantryIngredients', pCtrl.userIngredients.join(',') )
-      console.log(pCtrl.enterProtein)
+      pCtrl.newIngredient = ''
+      $window.localStorage.setItem('pantryIngredients', pCtrl.enterIngredient)
+      // $window.localStorage.setItem('pantryIngredients', pCtrl.userIngredients.join(',') )
+      console.log(pCtrl.enterIngredient)
       console.log(pCtrl.userIngredients)
     }
 
-    pCtrl.removeProtein = function(index){
-        pCtrl.enterProtein.splice(index,1)
+    pCtrl.removeIngredient = function(index){
+        pCtrl.enterIngredient.splice(index,1)
         pCtrl.userIngredients.splice(index,1)
 
-        $window.localStorage.setItem('pantryProteins', pCtrl.enterProtein)
-        $window.localStorage.setItem('pantryIngredients', pCtrl.userIngredients.join(',') )
+        $window.localStorage.setItem('pantryIngredients', pCtrl.enterIngredient)
+        // $window.localStorage.setItem('pantryIngredients', pCtrl.userIngredients.join(',') )
     }
 
   // adding and removing produce

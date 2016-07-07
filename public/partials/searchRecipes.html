@@ -1,3 +1,20 @@
-<div class="container">
-  <h1>{{sCtrl.title}}</h1>
+<div class='container'>
+    <div>
+        <h1 class='headings center-align'>{{sCtrl.title}}</h1><hr><br><br>
+    </div>
+
+    <div class='row'>
+        <input type='text' class='input-field col s6' placeholder='Enter Keywords Here' ng-model='sCtrl.search'>
+    </div>
+        <!-- <input type='checkbox'> Search by My Pantry <br><br> -->
+    <div class='row'>
+        <button type='button' class='btn btn light-blue accent-2' ng-click='sCtrl.searchRecipes(sCtrl.search)'>Search</button>
+        <button type='button' class='btn btn light-blue accent-2' ng-click='sCtrl.searchRecipesByPantry()'>Search By Pantry</button>
+    </div>
+
+    <div class='results'>
+        <ul ng-repeat='recipe in sCtrl.recipeIndex | orderBy: recipe'>
+            <li class="list"><a href="{{recipe.source_url}}">{{recipe.title}}</a></li>
+        </ul>
+    </div>
 </div>

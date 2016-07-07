@@ -32,7 +32,7 @@
       console.log(cCtrl.enterRecipe)
     }
 
-    cCtrl.remove = function(index){
+    cCtrl.removeRecipe = function(index){
         cCtrl.enterRecipe.splice(index,1)
     }
   }
