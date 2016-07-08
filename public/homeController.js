@@ -2,8 +2,16 @@
   angular.module('homeMODULE', [])
     .controller('homeCtrl', homeController)
 
-    function homeController(){
+    homeController.$inject('$http')
+    function homeController($http){
       var hCtrl = this
-      hCtrl.title = "Home Controller"
+
+      // Instantiating the newUser object
+      hCtrl.newUser = {}
+
+      hCtrl.createUser = function(){
+        console.log(hCtrl.newUser)
+        $http.post('/api/v1/users', hCtrl.newUser)
+      }
     }
 }());

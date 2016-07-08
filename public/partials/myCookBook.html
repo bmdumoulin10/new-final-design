@@ -25,7 +25,7 @@
     </div>
 
     <div class='row'>
-        <ul class='list'>
+        <ul class='list left-align'>
             <li class='seperator'ng-repeat="recipe in cCtrl.enterRecipe"><h3 class='headings'>{{ recipe.name }} <a class="btn-flat" ng-click='cCtrl.removeRecipe($index)'><i class="material-icons">delete</i></a></h3> {{recipe.directions}}</li>
         </ul>
     </div>

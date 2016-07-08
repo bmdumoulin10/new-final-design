@@ -4,9 +4,20 @@ var
   app           = express()
   bodyParser    = require('body-parser')
   logger        = require('morgan')
+  mongoose      = require('mongoose')
   path          = require('path')
-  apiRoutes     = require('./api-routes')
   port          = process.env.PORT || 5050
+
+// Connecting to mongoose for users DB
+mongoose.connect('mongodb://localhost/user',
+  function(err){
+    if(err){
+      console.error('ERROR starting mongoose!', err)
+    }
+    else{
+      console.log('Mongoose connected successfully')
+    }
+  })
 
 // Applying the middelware being used
 app.use(logger('dev')) //This logs all incomming routes
@@ -14,8 +25,16 @@ app.use(bodyParser.json()) //Parse all form data to json
 app.use(bodyParser.urlencoded({extended:true})) //Allow URL encoded to be pasred
 app.use(express.static(path.join(__dirname, './public'))) //Serving the public files
 
+// User API routes
+var userCtrl = require('./public/userController.js')
+
+app.get('/api/v1/users', userCtrl.get)
+app.get('/api/v1/users/:id', userCtrl.get)
+
+app.post('/api/v1/users', userCtrl.upsert)
+
 // Listen on a specific port and check for an Error
 app.listen(port, function(err){
   if(!err) console.log('Server is listening on port:' + port)
-  if(err) console.log('Server Crashed!')
+  if(err) console.log('Server Crashed!', err)
 })

@@ -56,31 +56,38 @@
 
                 <div class="row">
                   <div class="input-field col s6">
-                    <input id="firstname" type="text" class="validate">
+                    <input id="firstname" type="text" class="validate" ng-model='hCtrl.newUser.firstName'>
                     <label for="firstname">First Name</label>
                   </div>
 
                   <div class="input-field col s6">
-                    <input id="lastname" type="text" class="validate">
+                    <input id="lastname" type="text" class="validate" ng-model='hCtrl.newUser.lastName'>
                     <label for="lastname">Last Name</label>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="input-field col s6">
-                    <input id="dob" type="date" class="validate">
+                    <input id="dob" type="date" class="validate" ng-model='hCtrl.newUser.dob'>
                     <label class="active" for="dob">Date of Birth</label>
                   </div>
 
                   <div class="input-field col s6">
-                    <input id="email" type="email" class="validate">
+                    <input id="email" type="email" class="validate" ng-model='hCtrl.newUser.email'>
                     <label for="email">Email Address</label>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="input-field col s6">
-                    <input id="password" type="text" class="validate">
+                    <input id="username" type="text" class="validate" ng-model='hCtrl.newUser.username'>
+                    <label for="username">Username</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input id="password" type="text" class="validate" ng-model='hCtrl.newUser.password'>
                     <label for="password">Password</label>
                   </div>
 
@@ -92,7 +99,7 @@
               </div>
 
               <div class="modal-footer">
-                <a href="public/partials/myPantry.html" class="modal-action modal-close waves-effect waves-green btn-flat ">Sign Up</a>
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat " ng-click='hCtrl.createUser()'>Sign Up</a>
                 <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
               </div>
             </div>
