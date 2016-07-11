@@ -8,7 +8,7 @@
     var sCtrl = this
     sCtrl.search = ''
     var pantrySearch = $window.localStorage.getItem('pantryIngredients')
-    var apiEndpoint = 'http://food2fork.com/api/search?key={ENTER KEY}q='
+    var apiEndpoint = 'http://food2fork.com/api/search?key={ENTER KEY}&q='
     sCtrl.title = "Search Recipes"
     sCtrl.recipeIndex = []
 

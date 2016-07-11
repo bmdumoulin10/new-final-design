@@ -13,6 +13,13 @@
     <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".button-collapse").sideNav({
+          closeOnClick: true
+        });
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -29,10 +36,14 @@
           </ul>
 <!-- hamburger menu for med sized screens or smaller -->
           <ul class="side-nav light-blue accent-2" id="side-menu">
-            <li><a ui-sref="myPantry">My Pantry</a></li>
-            <li><a ui-sref="searchRecipes">Search Recipes</a></li>
-            <li><a ui-sref="myGroceryList">My Grocery List</a></li>
-            <li><a ui-sref="myCookBook">My Cookbook</a></li>
+            <li><a ui-sref="myPantry" class='white-text'>My Pantry</a></li>
+            <li><a ui-sref="searchRecipes" class='white-text'>Search Recipes</a></li>
+            <li><a ui-sref="myGroceryList" class='white-text'>My Grocery List</a></li>
+            <li><a ui-sref="myCookBook" class='white-text'>My Cookbook</a></li>
+            <li><a ui-sref="#" class='white-text'>About</a></li>
+            <li><a ui-sref="#" class='white-text'>Contact</a></li>
+            <li><a ui-sref="#" class='white-text'>FAQs</a></li>
+            <li><a ui-sref="#" class='white-text'>Terms</a></li>
           </ul>
         </div>
       </nav>
@@ -50,10 +61,10 @@
         <div class="footer-copyright">
           <div class="container">
             <ul>
-              <li class='bottom-links'><a class="grey-text text-lighten-3" ui-sref="about">About Us</a></li>
-              <li class='bottom-links'><a class="grey-text text-lighten-3" ui-sref="contact">Contact Us</a></li>
-              <li class='bottom-links'><a class="grey-text text-lighten-3" ui-sref="faqs">FAQs</a></li>
-              <li class='bottom-links'><a class="grey-text text-lighten-3" ui-sref="terms">Terms</a></li>
+              <li class='bottom-links hide-on-med-and-down'><a class="grey-text text-lighten-3" ui-sref="about">About</a></li>
+              <li class='bottom-links hide-on-med-and-down'><a class="grey-text text-lighten-3" ui-sref="contact">Contact</a></li>
+              <li class='bottom-links hide-on-med-and-down'><a class="grey-text text-lighten-3" ui-sref="faqs">FAQs</a></li>
+              <li class='bottom-links hide-on-med-and-down'><a class="grey-text text-lighten-3" ui-sref="terms">Terms</a></li>
               <li class="bottom-links right"> © 2016 Copyright Brian Dumoulin</li>
             </ul>
           </div>
