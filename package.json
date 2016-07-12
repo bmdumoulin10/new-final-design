@@ -31,10 +31,15 @@
   },
   "homepage": "https://github.com/bmdumoulin10/new-final-design#readme",
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "express-session": "^1.14.0",
     "mongoose": "^4.5.3",
     "morgan": "^1.7.0",
-    "request": "^2.72.0"
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "request": "^2.72.0",
+    "socket.io": "^1.4.8"
   }
 }

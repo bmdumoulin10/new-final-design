@@ -10,7 +10,7 @@
 
     var saveList = $window.localStorage.getItem('savedList')
 
-    gCtrl.enterItemNeeded = saveList === null? []: saveList.split(',')
+    gCtrl.enterItemNeeded = saveList === ''? []: saveList.split(',')
 
     gCtrl.newItem = ''
 

@@ -34,6 +34,8 @@
 
     cCtrl.removeRecipe = function(index){
         cCtrl.enterRecipe.splice(index,1)
+
+        $window.localStorage.setItem('savedCookbook',JSON.stringify(cCtrl.enterRecipe))
     }
   }
 }());

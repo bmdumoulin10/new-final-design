@@ -1,4 +1,8 @@
-var User = require('./usersModel.js')
+var
+    User          = require('./usersModel.js')
+    bcrypt        = require('bcryptjs')
+    passport      = require('passport')
+    LocalStrategy = require('passport-local').Strategy
 
 module.exports = {
 
@@ -6,7 +10,7 @@ module.exports = {
 
     //get specific users
     User.findOne({_id : req.params.id}, function(err, user){
-      res.send(hero)
+      res.send(user)
     })
   },
 

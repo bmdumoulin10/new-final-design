@@ -2,12 +2,19 @@
 var
   express       = require('express')
   app           = express()
+  session       = require('express-session')
   bodyParser    = require('body-parser')
   logger        = require('morgan')
   mongoose      = require('mongoose')
   path          = require('path')
   port          = process.env.PORT || 5050
 
+// Setting up Express session
+app.sessionMiddleware = session({
+  secret: 'keyboard cat',
+  saveUninitialized: true,
+  resave: false,
+})
 // Connecting to mongoose for users DB
 mongoose.connect('mongodb://localhost/user',
   function(err){
@@ -24,6 +31,7 @@ app.use(logger('dev')) //This logs all incomming routes
 app.use(bodyParser.json()) //Parse all form data to json
 app.use(bodyParser.urlencoded({extended:true})) //Allow URL encoded to be pasred
 app.use(express.static(path.join(__dirname, './public'))) //Serving the public files
+app.use(app.sessionMiddleware)
 
 // User API routes
 var userCtrl = require('./public/userController.js')

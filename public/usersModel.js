@@ -1,4 +1,6 @@
+// Database setup
 var mongoose = require('mongoose')
+// mongoose.connect('mongodb://localhost/??')
 
 var userSchema = mongoose.Schema({
 
@@ -6,13 +8,13 @@ var userSchema = mongoose.Schema({
   lastName            : String,
   dob                 : Date,
   email               : String,
-  username            : String,
-  password            : String,
+  username            : {type : String, required : true, unique : true},
+  password            : {type : String, required : true},
   pantryIngredients   : [String],
   groceryList         : [String],
   cookbook            : [{
     name : String,
-    recipe : String
+    directions : String
   }]
 })
 
