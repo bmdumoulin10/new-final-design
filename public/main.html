@@ -23,7 +23,7 @@
   </head>
   <body>
     <header>
-      <nav class="light-blue accent-2">
+      <nav class="light-blue accent-4">
         <div class="nav-wrapper">
 <!-- normal navbar at the top only for larger than medium sized screens -->
           <a ui-sref="home" class="mypantry brand-logo ">MyPantry</a>
@@ -33,9 +33,10 @@
             <li><a ui-sref="searchRecipes">Search Recipes</a></li>
             <li><a ui-sref="myGroceryList">My Grocery List</a></li>
             <li><a ui-sref="myCookBook">My Cookbook</a></li>
+            <li><button type="button" name="button" class="modal-trigger waves-effect waves-light btn light-blue accent-2">Sign Out</button></li>
           </ul>
 <!-- hamburger menu for med sized screens or smaller -->
-          <ul class="side-nav light-blue accent-2" id="side-menu">
+          <ul class="side-nav light-blue accent-4" id="side-menu">
             <li><a ui-sref="myPantry" class='white-text'>My Pantry</a></li>
             <li><a ui-sref="searchRecipes" class='white-text'>Search Recipes</a></li>
             <li><a ui-sref="myGroceryList" class='white-text'>My Grocery List</a></li>
@@ -44,6 +45,7 @@
             <li><a ui-sref="#" class='white-text'>Contact</a></li>
             <li><a ui-sref="#" class='white-text'>FAQs</a></li>
             <li><a ui-sref="#" class='white-text'>Terms</a></li>
+            <li><button type="button" name="button" class="modal-trigger waves-effect waves-light btn light-blue accent-2 sideNavButton">Sign Out</button></li>
           </ul>
         </div>
       </nav>
@@ -57,7 +59,7 @@
 
     </main>
 
-    <footer class="light-blue accent-2">
+    <footer class="light-blue accent-4">
         <div class="footer-copyright">
           <div class="container">
             <ul>
@@ -76,15 +78,14 @@
 
     <!--UI Router & All Controllers-->
     <script rel='javascript' src='app.js'></script>
-    <script rel='javascript' src='recipeFactory.js'></script>
+
     <script rel='javascript' src='homeController.js'></script>
     <script rel='javascript' src='mainController.js'></script>
     <script rel='javascript' src='myCookBookController.js'></script>
     <script rel='javascript' src='myGroceryListController.js'></script>
     <script rel='javascript' src='myPantryController.js'></script>
     <script rel='javascript' src='searchRecipesController.js'></script>
-    <script rel='javascript' src='userController.js'></script>
-
+    <script rel='javascript' src='userFactory.js'></script>
 
   </body>
 </html>

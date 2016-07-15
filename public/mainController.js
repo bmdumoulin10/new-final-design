@@ -33,5 +33,6 @@ configRouter.$inject = ['$stateProvider', '$urlRouterProvider']
         templateUrl: 'partials/myCookBook.html',
         controller: 'myCookBookCtrl as cCtrl'
       })
+
     $urlRouterProvider.otherwise('/')
   }

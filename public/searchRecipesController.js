@@ -2,9 +2,9 @@
   angular.module('searchRecipesMODULE', [])
   .controller('searchRecipesCtrl', searchRecipesController)
 
-  searchRecipesController.$inject = ['$state', '$http', '$window']
+  searchRecipesController.$inject = ['$state', '$http', '$window', 'userFactory']
 
-  function searchRecipesController($state, $http, $window){
+  function searchRecipesController($state, $http, $window, userFactory){
     var sCtrl = this
     sCtrl.search = ''
     var pantrySearch = $window.localStorage.getItem('pantryIngredients')

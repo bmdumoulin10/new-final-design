@@ -2,9 +2,9 @@
   angular.module('myGroceryListMODULE', [])
   .controller('myGroceryListCtrl', myGroceryListController)
 
-  myGroceryListController.$inject = ['$state', '$window']
+  myGroceryListController.$inject = ['$state', '$window', 'userFactory']
 
-  function myGroceryListController($state, $window){
+  function myGroceryListController($state, $window, userFactory){
     var gCtrl = this
     gCtrl.title = "My Grocery List"
 

@@ -1,8 +1,5 @@
 var
     User          = require('./usersModel.js')
-    bcrypt        = require('bcryptjs')
-    passport      = require('passport')
-    LocalStrategy = require('passport-local').Strategy
 
 module.exports = {
 
@@ -14,7 +11,7 @@ module.exports = {
     })
   },
 
-  upsert : function(req, res){
+  update : function(req, res){
 
     if(req.params.id){
       // Update existing user
@@ -22,20 +19,11 @@ module.exports = {
         if(err){
           return res.send(err)
         }
-        res.send(updated)
+        res.json(updated)
       })
     }
     else{
-      // Create a new userCtrl
-      var newUser = new User(req.body)
-
-      newUser.save(function(err, doc){
-        res.send(doc)
-      })
+      res.send('ID required')
+      }
     }
-  },
-
-  delete : function(req, res){
-
   }
-}

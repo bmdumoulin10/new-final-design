@@ -4,7 +4,7 @@
   </div>
 
   <div class='row'>
-      <input type="text" class="input-field col s6" placeholder="Enter Pantry Ingredient" ng-model="pCtrl.newIngredient"><a class="btn-floating btn-large waves-effect waves-light light-blue accent-2" ng-click="pCtrl.addIngredient()"><i class="material-icons">add</i></a>
+      <input type="text" class="input-field col s6" placeholder="Enter Pantry Ingredient" ng-model="pCtrl.newIngredient"><a class="btn-floating btn-large waves-effect waves-light light-blue accent-4" ng-click="pCtrl.addIngredient()"><i class="material-icons">add</i></a>
 
       <!-- <button class="btn btn-default searchButton" type="button" ng-click="pCtrl.addIngredient()">Add Protein</button> -->
         <ul>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="row left-align">
-      <button type='' class='btn btn light-blue accent-2' ng-click='hCtrl.updatePantry($event)'>Save Changes</button>
+      <button type='' class='btn btn light-blue accent-4' ng-click='pCtrl.saveIngredients()'>Save Changes</button>
     </div>
   </div>
 </div>

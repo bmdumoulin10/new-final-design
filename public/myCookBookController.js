@@ -2,9 +2,9 @@
   angular.module('myCookBookMODULE',[])
   .controller('myCookBookCtrl', myCookBookController)
 
-  myCookBookController.$inject = ['$state', '$window']
+  myCookBookController.$inject = ['$state', '$window', 'userFactory']
 
-  function myCookBookController($state, $window){
+  function myCookBookController($state, $window, userFactory){
     var cCtrl = this
     cCtrl.title = "My Cookbook"
     var saveCookbook = $window.localStorage.getItem('savedCookbook')

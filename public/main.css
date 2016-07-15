@@ -14,7 +14,7 @@ main {
   font-family: cursive;
 }
 .intro{
-  color: #40c4ff;
+  color: #0091ea;
   text-align: center;
 }
 
@@ -24,7 +24,7 @@ main {
 }
 
 .headings{
-  color: #40c4ff;
+  color: #0091ea;
   font-family: cursive;
 }
 
@@ -37,4 +37,9 @@ main {
 .seperator{
     border-bottom: 1px solid #2a4c59;
     padding-bottom: 10px;
+}
+
+.sideNavButton{
+  display: block;
+  margin: 0 auto;
 }

@@ -1,13 +1,8 @@
 // Database setup
 var mongoose = require('mongoose')
-// mongoose.connect('mongodb://localhost/??')
+// mongoose.connect('mongodb://localhost/partials/myPantry')
 
 var userSchema = mongoose.Schema({
-
-  firstName           : String,
-  lastName            : String,
-  dob                 : Date,
-  email               : String,
   username            : {type : String, required : true, unique : true},
   password            : {type : String, required : true},
   pantryIngredients   : [String],
@@ -18,6 +13,6 @@ var userSchema = mongoose.Schema({
   }]
 })
 
-var User = mongoose.model('User', userSchema)
+var User = mongoose.model('user', userSchema)
 
 module.exports = User
