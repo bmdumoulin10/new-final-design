@@ -14,7 +14,12 @@
 
     <div class='results'>
         <ul ng-repeat='recipe in sCtrl.recipeIndex | orderBy: recipe'>
-            <li class="list"><a href="{{recipe.source_url}}" class='list'>{{recipe.title}}</a></li>
+            <li class="list"><a href="http://www.yummly.com/recipe/{{recipe.id}}" class='list'>{{recipe.recipeName}}</a></li>
         </ul>
     </div>
+
+    <div class="center-align">
+      <p class='yummly'>Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='http://static.yummly.com/api-logo.png'/></a></p>
+    </div>
+
 </div>

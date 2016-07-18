@@ -5,11 +5,11 @@
 
 <div class='container center-align'>
     <div class='row'>
-      <h1 class='headings'>{{cCtrl.title}}</h1><hr><br><br>
+      <h1 class='headings'>{{cCtrl.user.username}}'s Cookbook</h1><hr><br><br>
     </div>
 
     <div class='row'>
-        <input type="text" id='input1' class="input-field col s6" placeholder="Enter Recipe Name" ng-model="cCtrl.newName"><a class="btn-floating btn-large waves-effect waves-light light-blue accent-2" ng-click="cCtrl.addRecipe()"><i class="material-icons">add</i></a>
+        <input type="text" id='input1' class="input-field col s6" placeholder="Enter Recipe Name" ng-model="cCtrl.newName"><a class="btn-floating btn-large waves-effect waves-light light-blue accent-4" ng-click="cCtrl.addRecipe()"><i class="material-icons">add</i></a>
         <!-- <button class="btn light-blue accent-2" type="button" ng-click="cCtrl.addRecipe()">Add Recipe</button> -->
     </div>
 
@@ -26,12 +26,12 @@
 
     <div class='row'>
         <ul class='list left-align'>
-            <li class='seperator'ng-repeat="recipe in cCtrl.enterRecipe"><h3 class='headings'>{{ recipe.name }} <a class="btn-flat" ng-click='cCtrl.removeRecipe($index)'><i class="material-icons">delete</i></a></h3> {{recipe.directions}}</li>
+            <li class='seperator'ng-repeat="recipe in cCtrl.user.cookbook"><h3 class='headings'>{{ recipe.name }} <a class="btn-flat" ng-click='cCtrl.removeRecipe($index)'><i class="material-icons">delete</i></a></h3> {{recipe.directions}}</li>
         </ul>
     </div>
 
     <div class="row left-align">
-      <button type='button' class='btn btn light-blue accent-2' ng-click='hCtrl.updateCookbook()'>Save Changes</button>
+      <button type='button' class='btn btn light-blue accent-4' ng-click='cCtrl.saveCookbook()'>Save Changes</button>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="container center-align">
   <div class="row">
-    <h1 class="headings">{{pCtrl.title}}</h1><hr><br><br>
+    <h1 class="headings">{{pCtrl.user.username}}'s Pantry</h1><hr><br><br>
   </div>
 
   <div class='row'>
@@ -8,7 +8,7 @@
 
       <!-- <button class="btn btn-default searchButton" type="button" ng-click="pCtrl.addIngredient()">Add Protein</button> -->
         <ul>
-          <li ng-repeat='ingredient in pCtrl.enterIngredient' class='list left-align'>{{ ingredient }}<a class="btn-flat" ng-click='pCtrl.removeIngredient($index)'><i class="material-icons">delete</i></a>
+          <li ng-repeat='ingredient in pCtrl.user.pantryIngredients' class='list left-align'>{{ ingredient }}<a class="btn-flat" ng-click='pCtrl.removeIngredient($index)'><i class="material-icons">delete</i></a>
             <!-- <button type='button' class='btn btn-danger btn-xs clearButton' ng-click='pCtrl.removeIngredient($index)'>Delete</button></li> -->
         </ul>
     </div>

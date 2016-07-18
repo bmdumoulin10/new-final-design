@@ -32,6 +32,7 @@
         //     data: user
         //   })
         // }
+
         factoryUser.update = function(user){
           console.log(user)
           return $http.put('/api/v1/users/' + user._id , user)

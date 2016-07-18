@@ -1,21 +1,21 @@
 <div class='container center-align'>
   <div class='row'>
-    <h1 class='headings'>{{gCtrl.title}}</h1><hr><br><br>
+    <h1 class='headings'>{{gCtrl.user.username}}'s Grocery List</h1><hr><br><br>
   </div>
 
   <div class='row'>
-      <input type="text" class="input-field col s6" placeholder="Enter Gorceries Needed" ng-model="gCtrl.newItem"><a class="btn-floating btn-large waves-effect waves-light light-blue accent-2" ng-click="gCtrl.myGroceryList()"><i class="material-icons">add</i></a>
+      <input type="text" class="input-field col s6" placeholder="Enter Gorceries Needed" ng-model="gCtrl.newItem"><a class="btn-floating btn-large waves-effect waves-light light-blue accent-4" ng-click="gCtrl.myGroceryList()"><i class="material-icons">add</i></a>
 
       <!-- <input type="text" class="input-field col s6" placeholder="Enter grocery items needed here" ng-model="gCtrl.newItem"><br>
       <a class="btn-floating btn-large waves-effect waves-light light-blue accent-2" ng-click="pCtrl.addIngredient()"><i class="material-icons">add</i></a> -->
 
       <ul>
-          <li class='list left-align' ng-repeat="item in gCtrl.enterItemNeeded"> {{item}}  <a class="btn-flat" ng-click='gCtrl.remove($index)'><i class="material-icons">delete</i></a></li>
+          <li class='list left-align' ng-repeat="item in gCtrl.user.groceryList"> {{item}}  <a class="btn-flat" ng-click='gCtrl.remove($index)'><i class="material-icons">delete</i></a></li>
             <!-- <button type="button" class="btn btn-danger btn-xs clearButton" ng-click='gCtrl.remove($index)'>Delete</button></li> -->
       </ul>
   </div>
 
   <div class="row left-align">
-    <button type='button' class='btn btn light-blue accent-2' ng-click='hCtrl.updateGroceries()'>Save Changes</button>
+    <button type='button' class='btn btn light-blue accent-4' ng-click='gCtrl.saveGroceries()'>Save Changes</button>
   </div>
 </div>
