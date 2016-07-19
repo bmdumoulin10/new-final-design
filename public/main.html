@@ -33,7 +33,7 @@
             <li><a ui-sref="searchRecipes">Search Recipes</a></li>
             <li ng-if='nCtrl.user.userId'><a ui-sref="myGroceryList">My Grocery List</a></li>
             <li ng-if='nCtrl.user.userId'><a ui-sref="myCookBook">My Cookbook</a></li>
-            <li ng-if='nCtrl.user.userId'><a href="/logout">Sign Out</a></li>
+            <li ng-if='nCtrl.user.userId'><a href="/logout">Log Out</a></li>
           </ul>
 <!-- hamburger menu for med sized screens or smaller -->
           <ul class="side-nav light-blue accent-4" id="side-menu">
@@ -45,7 +45,7 @@
             <li><a ui-sref="#" class='white-text'>Contact</a></li>
             <li><a ui-sref="#" class='white-text'>FAQs</a></li>
             <li><a ui-sref="#" class='white-text'>Terms</a></li>
-            <li ng-if='nCtrl.user.userId'><a href="/logout" class='white-text'>Sign Out</a></li>
+            <li ng-if='nCtrl.user.userId'><a href="/logout" class='white-text'>Log Out</a></li>
           </ul>
         </div>
       </nav>
