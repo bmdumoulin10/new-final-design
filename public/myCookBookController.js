@@ -19,9 +19,6 @@
       name: '',
       directions: ''
     }]
-    // var saveCookbook = $window.localStorage.getItem('savedCookbook')
-
-    // cCtrl.enterRecipe = saveCookbook === null? []: JSON.parse(saveCookbook)
 
     cCtrl.newName = ''
     cCtrl.newDirections = ''
@@ -39,20 +36,15 @@
       cCtrl.newName = ''
       cCtrl.newDirections = ''
 
-      // $window.localStorage.setItem('savedCookbook',JSON.stringify(cCtrl.enterRecipe))
-
       console.log(cCtrl.user.cookbook)
     }
 
     cCtrl.removeRecipe = function(index){
         cCtrl.user.cookbook.splice(index,1)
-
-        // $window.localStorage.setItem('savedCookbook',JSON.stringify(cCtrl.enterRecipe))
     }
 
     cCtrl.saveCookbook = function(){
       console.log(cCtrl.user)
-      // pCtrl.user.pantryIngredients = pCtrl.userIngredients
 
       userFactory.update(cCtrl.user)
         .then(function(responseData){

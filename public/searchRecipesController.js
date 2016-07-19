@@ -14,8 +14,6 @@
       })
 
     sCtrl.search = ''
-    // var pantrySearch = $window.localStorage.getItem('pantryIngredients')
-
     // var apiEndpoint = 'http://food2fork.com/api/search?key=ENTER-API-KEY&q='
     var apiEndpoint = 'http://api.yummly.com/v1/api/recipes?_app_id=ENTER-ID-HERE&_app_key=ENTER-KEY-HERE&q='
 
@@ -32,18 +30,6 @@
           }, function(error){
             console.error(error)
         })
-        // $http({
-        //   url: apiEndpoint + encodeURIComponent(sCtrl.search),
-        //   method: 'JSONP',
-        //   responseType: 'json'
-        // })
-          //.then(success, oops)
-        //   .then(function(response){
-        //     console.log(typeof response)
-        //     sCtrl.recipeIndex = response.data.recipes
-        //   }, function(error){
-        //     console.error(error)
-        // })
       sCtrl.search = ''
       }
 
@@ -60,6 +46,7 @@
             console.error(error)
         })
       }
+      // =-=-=-=-=-=-=-=-=-=-=-=-=-=closing tags=-=-=-=-=-=-=-=-=-=-=-=-
   }
 
 }());

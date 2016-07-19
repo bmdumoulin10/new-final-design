@@ -31,7 +31,9 @@
             // })
             .then(function(returnData){
               console.log('login', returnData)
+
                 if ( returnData.data.success ){
+                  userFactory.userId = returnData.data.userId
                   $state.go('myPantry')
                 } else {
                   console.log(returnData)

@@ -22,30 +22,30 @@
     </script>
   </head>
   <body>
-    <header>
+    <header ng-controller='navCtrl as nCtrl'>
       <nav class="light-blue accent-4">
         <div class="nav-wrapper">
 <!-- normal navbar at the top only for larger than medium sized screens -->
           <a ui-sref="home" class="mypantry brand-logo ">MyPantry</a>
           <a href="#" data-activates="side-menu" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a ui-sref="myPantry">My Pantry</a></li>
+            <li ng-if='nCtrl.user.userId'><a ui-sref="myPantry">My Pantry</a></li>
             <li><a ui-sref="searchRecipes">Search Recipes</a></li>
-            <li><a ui-sref="myGroceryList">My Grocery List</a></li>
-            <li><a ui-sref="myCookBook">My Cookbook</a></li>
-            <li><a href="/logout">Sign Out</a></li>
+            <li ng-if='nCtrl.user.userId'><a ui-sref="myGroceryList">My Grocery List</a></li>
+            <li ng-if='nCtrl.user.userId'><a ui-sref="myCookBook">My Cookbook</a></li>
+            <li ng-if='nCtrl.user.userId'><a href="/logout">Sign Out</a></li>
           </ul>
 <!-- hamburger menu for med sized screens or smaller -->
           <ul class="side-nav light-blue accent-4" id="side-menu">
-            <li><a ui-sref="myPantry" class='white-text'>My Pantry</a></li>
+            <li ng-if='nCtrl.user.userId'><a ui-sref="myPantry" class='white-text'>My Pantry</a></li>
             <li><a ui-sref="searchRecipes" class='white-text'>Search Recipes</a></li>
-            <li><a ui-sref="myGroceryList" class='white-text'>My Grocery List</a></li>
-            <li><a ui-sref="myCookBook" class='white-text'>My Cookbook</a></li>
+            <li ng-if='nCtrl.user.userId'><a ui-sref="myGroceryList" class='white-text'>My Grocery List</a></li>
+            <li ng-if='nCtrl.user.userId'><a ui-sref="myCookBook" class='white-text'>My Cookbook</a></li>
             <li><a ui-sref="#" class='white-text'>About</a></li>
             <li><a ui-sref="#" class='white-text'>Contact</a></li>
             <li><a ui-sref="#" class='white-text'>FAQs</a></li>
             <li><a ui-sref="#" class='white-text'>Terms</a></li>
-            <li><li><a href="/logout" class='white-text'>Sign Out</a></li></li>
+            <li ng-if='nCtrl.user.userId'><a href="/logout" class='white-text'>Sign Out</a></li>
           </ul>
         </div>
       </nav>
@@ -67,7 +67,7 @@
               <li class='bottom-links hide-on-med-and-down'><a class="grey-text text-lighten-3" ui-sref="contact">Contact</a></li>
               <li class='bottom-links hide-on-med-and-down'><a class="grey-text text-lighten-3" ui-sref="faqs">FAQs</a></li>
               <li class='bottom-links hide-on-med-and-down'><a class="grey-text text-lighten-3" ui-sref="terms">Terms</a></li>
-              <li class="bottom-links right"> © 2016 Copyright Brian Dumoulin</li>
+              <li class="bottom-links right white-text"> © 2016 Copyright Brian Dumoulin</li>
             </ul>
           </div>
         </div>
@@ -84,7 +84,7 @@
     <script rel='javascript' src='myGroceryListController.js'></script>
     <script rel='javascript' src='myPantryController.js'></script>
     <script rel='javascript' src='searchRecipesController.js'></script>
-    <script rel='javascript' src='navbarController.js'></script>
+    <script rel='javascript' src='navController.js'></script>
     <script rel='javascript' src='userFactory.js'></script>
 
   </body>

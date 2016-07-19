@@ -16,9 +16,6 @@
       })
 
     gCtrl.userGroceryList = []
-    // var saveList = $window.localStorage.getItem('savedList')
-
-    // gCtrl.enterItemNeeded = saveList === ''? []: saveList.split(',')
 
     gCtrl.newItem = ''
 
@@ -27,16 +24,12 @@
 
       gCtrl.newItem = ''
 
-      // $window.localStorage.setItem('savedList',gCtrl.enterItemNeeded)
-
       console.log(gCtrl.user.groceryList)
     }
 
     gCtrl.remove = function(index){
         gCtrl.user.groceryList.splice(index,1)
         console.log(gCtrl.user.groceryList)
-
-        // $window.localStorage.setItem('savedList',gCtrl.enterItemNeeded)
     }
 
     gCtrl.saveGroceries = function(){
@@ -47,5 +40,6 @@
           $state.go('searchRecipes')
         })
     }
+    //=-=-=-=-=-=-=-=-=-=-=-closing tags=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   }
 }());

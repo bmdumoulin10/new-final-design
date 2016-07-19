@@ -4,8 +4,6 @@
 
       userFactory.$inject = ['$http']
 
-
-
       function userFactory($http){
         var factoryUser = {}
 
