@@ -82,31 +82,31 @@ passport.use(new LocalStrategy(
   }
 ))
 
-app.isAuthenticated = function(req, res, next){
-  if(req.isAuthenticated()){
-    return next()
-  }
-  console.log('hi')
-  res.redirect('/mypantry')
-}
-
-app.isAuthenticatedAjax = function(req, res, next){
-  if(req.isAuthenticated()){
-    // Middleware allows the execution chain to continue
-    return next()
-  }
-  // If the user is not logged in send an error
-  res.send({error: 'not logged in'})
-}
-
-app.isSteveAuthenticated = function(req, res, next){
-  if(req.isAuthenticated() && req.user.username === 'steve'){
-    // MIddleware allows the execution chain to continue
-    return next()
-  }
-  // If the user is not logged in, redirect to login page (Home page with modals)
-  res.redirect('/')
-}
+// app.isAuthenticated = function(req, res, next){
+//   if(req.isAuthenticated()){
+//     return next()
+//   }
+//   console.log('hi')
+//   res.redirect('/mypantry')
+// }
+//
+// app.isAuthenticatedAjax = function(req, res, next){
+//   if(req.isAuthenticated()){
+//     // Middleware allows the execution chain to continue
+//     return next()
+//   }
+//   // If the user is not logged in send an error
+//   res.send({error: 'not logged in'})
+// }
+//
+// app.isSteveAuthenticated = function(req, res, next){
+//   if(req.isAuthenticated() && req.user.username === 'steve'){
+//     // MIddleware allows the execution chain to continue
+//     return next()
+//   }
+//   // If the user is not logged in, redirect to login page (Home page with modals)
+//   res.redirect('/')
+// }
 // End of the Passport Configuration
 //
 // // Security middleware for signup, adding salt to passwords
@@ -169,10 +169,10 @@ app.get('/currentuser', function(req, res, next){
 
 })
 
-// app.get('/logout', function(req, res){
-//   req.logout()
-//   res.redirect('/')
-// })
+app.get('/logout', function(req, res){
+  req.logout()
+  res.redirect('/')
+})
 
 // app.get('/myPantry', app.isAuthenticated, function(req, res){
 //   res.sendfile('/partials/myPantry.html', {root: './public'})

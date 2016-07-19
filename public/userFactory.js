@@ -25,14 +25,6 @@
           return $http.get('/currentuser')
         }
 
-        // factoryUser.logout = function(user){
-        //   return $http({
-        //     method: 'POST',
-        //     url: '/logout',
-        //     data: user
-        //   })
-        // }
-
         factoryUser.update = function(user){
           console.log(user)
           return $http.put('/api/v1/users/' + user._id , user)

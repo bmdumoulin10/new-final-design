@@ -33,7 +33,7 @@
             <li><a ui-sref="searchRecipes">Search Recipes</a></li>
             <li><a ui-sref="myGroceryList">My Grocery List</a></li>
             <li><a ui-sref="myCookBook">My Cookbook</a></li>
-            <li><button type="button" name="button" class="modal-trigger waves-effect waves-light btn red accent-4" ng-click='hCtrl.logout()'>Sign Out</button></li>
+            <li><a href="/logout">Sign Out</a></li>
           </ul>
 <!-- hamburger menu for med sized screens or smaller -->
           <ul class="side-nav light-blue accent-4" id="side-menu">
@@ -45,7 +45,7 @@
             <li><a ui-sref="#" class='white-text'>Contact</a></li>
             <li><a ui-sref="#" class='white-text'>FAQs</a></li>
             <li><a ui-sref="#" class='white-text'>Terms</a></li>
-            <li><button type="button" name="button" class="modal-trigger waves-effect waves-light btn red accent-4 sideNavButton">Sign Out</button></li>
+            <li><li><a href="/logout" class='white-text'>Sign Out</a></li></li>
           </ul>
         </div>
       </nav>
@@ -78,13 +78,13 @@
 
     <!--UI Router & All Controllers-->
     <script rel='javascript' src='app.js'></script>
-
     <script rel='javascript' src='homeController.js'></script>
     <script rel='javascript' src='mainController.js'></script>
     <script rel='javascript' src='myCookBookController.js'></script>
     <script rel='javascript' src='myGroceryListController.js'></script>
     <script rel='javascript' src='myPantryController.js'></script>
     <script rel='javascript' src='searchRecipesController.js'></script>
+    <script rel='javascript' src='navbarController.js'></script>
     <script rel='javascript' src='userFactory.js'></script>
 
   </body>

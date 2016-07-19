@@ -39,9 +39,6 @@
             })
         }
 
-      // hCtrl.logout = function(){
-      //   userFactory.logout()
-      // }
 //  -=-=-=-=-=-=-=-=-=-=-=- closing tags -=-=-=-=-=-=-=-=-=-=-=-
   }
 }());
