@@ -24,7 +24,7 @@
       sCtrl.searchRecipes = function(){
         console.log('searching for recipes....');
 
-        $http.get(apiEndpoint + encodeURIComponent(sCtrl.search))
+        $http.get(apiEndpoint + encodeURIComponent(sCtrl.search) + '&maxResult=100')
           //.then(success, oops)
           .then(function(response){
             console.log(response)
@@ -49,10 +49,10 @@
 
       sCtrl.searchRecipesByPantry = function(){
         console.log('searching for recipes....');
-        var pantrySearch = sCtrl.user.pantryIngredients
+        var pantrySearch = sCtrl.user.pantryIngredients.join(', ')
         console.log(pantrySearch)
 
-        $http.get(apiEndpoint + encodeURIComponent(pantrySearch))
+        $http.get(apiEndpoint + encodeURIComponent(pantrySearch) + '&maxResult=100')
           //.then(success, oops)
           .then(function(response){
             sCtrl.recipeIndex = response.data.matches
