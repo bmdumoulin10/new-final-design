@@ -95,10 +95,10 @@ app.post('/signup', function(req, res){
         password            : hash,
       })
       newUser.save(function(saveErr, user){
-        if(saveErr){res.send({err: saveErr})}
+        if(saveErr){res.status(500).send({err: saveErr})}
         else{
           req.login(user, function(loginErr){
-            if(loginErr){res.send({err: loginErr})}
+            if(loginErr){res.status(500).send({err: loginErr})}
             else{res.send({success: 'success', userId: user._id})}
           })
         }

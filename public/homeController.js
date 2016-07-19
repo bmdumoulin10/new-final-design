@@ -15,8 +15,12 @@
         // $http.post('/signup', hCtrl.newUser)
         .then(function(returnData){
           console.log('3', returnData)
-          hCtrl.newUser.id = returnData.data.userId
+          userFactory.userId = returnData.data.userId
           $state.go('myPantry')
+        }, function(err){
+          if(err){
+            console.log('Error Signing In:', err)
+          }
         })
       }
 
