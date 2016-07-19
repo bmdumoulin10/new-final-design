@@ -15,7 +15,7 @@
 
     sCtrl.search = ''
     // var apiEndpoint = 'http://food2fork.com/api/search?key=ENTER-API-KEY&q='
-    var apiEndpoint = 'http://api.yummly.com/v1/api/recipes?_app_id=ENTER-ID-HERE&_app_key=ENTER-KEY-HERE&q='
+    var apiEndpoint = 'http://api.yummly.com/v1/api/recipes?_app_id=4fc0c545&_app_key=2b832893729aab6d6d0959420edf65ba&q='
 
     sCtrl.recipeIndex = []
 
